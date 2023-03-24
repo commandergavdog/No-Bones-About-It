@@ -1,18 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Abel', Fallback, sans-serif;
+    src: url("./assets/fonts/Abel/Abel-Regular.ttf");
+}
+
 body {
+    width: 100vw;
+    height: 100vh;
     max-width: 100vw;
     max-height: 100vh;
     text-align: center;
+    background-image: url("./assets/images/landing_background5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    font-family: "Abel", Fallback, sans-serif;
 }
 
 #container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    
 }
 
 .button {
     margin: 1em;
     font-size: 2em;
-    
-
+    z-index: 3;
 }
+
+.button a {
+    color: #fff;
+    text-decoration: none;    
+    font-size: clamp(1em, 3vw, 2em);
+    z-index: 3;
+}
+
+.button a:hover {
+    color: #825F2A;
+    text-decoration: underline;
+}
+
+#logo {    
+    width: clamp(18em, 35vw, 25em);
+    position: fixed;
+    top: 50%;
+    left: 50%;    
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2;
+  }
