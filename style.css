@@ -1,7 +1,7 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
+} */
 
 @font-face {
     font-family: 'Abel', Fallback, sans-serif;
@@ -9,17 +9,19 @@
 }
 
 body {
-    width: 100vw;
+    /* width: 100vw;
     height: 100vh;
     max-width: 100vw;
-    max-height: 100vh;
+    max-height: 100vh; */
     text-align: center;
     background-image: url("./assets/images/landing_background5.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-x: hidden;
     font-family: "Abel", Fallback, sans-serif;
+    background-attachment: fixed;
 }
 
 #container {
@@ -28,7 +30,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    
+
 }
 
 .button {
@@ -39,7 +41,7 @@ body {
 
 .button a {
     color: #fff;
-    text-decoration: none;    
+    text-decoration: none;
     font-size: clamp(1em, 3vw, 2em);
     z-index: 3;
     text-transform: uppercase;
@@ -50,23 +52,171 @@ body {
     text-decoration: underline;
 }
 
-#logo {    
+#logo {
     width: clamp(18em, 35vw, 25em);
     position: fixed;
     top: 50%;
-    left: 50%;    
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
 }
 
 #overlay {
-    position: fixed; /* Sit on top of the page content */
+    position: fixed;
+    /* Sit on top of the page content */
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 2;
-  }
+}
+
+.modal-container {
+    /* height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute; */
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Abel';
+    background-color: #000;
+    background-image: url("./assets/images/modal-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10vw;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+}
+
+.top-row {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;     
+    align-items: center;
+    margin: 1em;
+    font-family: "Abel", Fallback, sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.modal-logo img {
+    width: 5em;
+}
+
+.modal-logo img:hover {
+    transform: scale(1.1);
+    transition: all .2s ease;
+}
+
+.modal-close {
+    align-self: flex-start;
+    font-size: 1.25em;
+}
+
+.modal-close:hover {
+    background-color: #fff;
+    border-radius: 50%
+}
+
+.modal-close i:hover {
+    color: #825F2A;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all .2s ease;
+    
+}
+
+.form {
+    background-color: #000;
+    color: #fff;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 75%;
+    font-family: "Abel", Fallback, sans-serif;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+label span {
+    color: grey;
+}
+
+.form-input-container {    
+    display: flex;
+    flex-direction: column;    
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.form label {
+    padding: .5em 0;
+    margin-top: .5em;
+    align-self: flex-start;
+}
+
+.form input {
+    padding: 1em;
+    width: 50%;
+}
+
+.form-button {    
+    border-color: #fff;
+    border-width: .25rem;
+    border-style: solid;
+    align-self: center;
+    color: #fff;
+    background-color: #000;
+    padding: .5em 1em;
+    margin: 1em;
+    font-size: 1.25em;
+    font-family: "Abel", Fallback, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;    
+}
+
+.form-button:hover {
+    color: #825F2A;
+    border-color: #825F2A;    
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all .2s ease;
+}    
+
+.modal-foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    background-color: #000;
+    padding: 1em;
+}
+
+.social-icon {
+    margin: 0 .25em;
+    font-size: 2em;
+}
+
+.social-icon:hover {
+    color: #825F2A;
+    cursor: pointer;
+
+}
