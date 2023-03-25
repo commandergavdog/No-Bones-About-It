@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +10,11 @@
     <script src="https://kit.fontawesome.com/442f629b66.js" crossorigin="anonymous"></script>
     <title>No Bones About It</title>
 </head>
+
 <body>
     <div id="overlay"></div>
 
-    <div id="container">    
+    <div id="container">
         <div class="button"><a href="./assets/images/Landing.png">Landing</a></div>
         <div class="button"><a href="./assets/images/Email-Modal.png">Modal</a></div>
     </div>
@@ -20,5 +22,54 @@
 
     <img id="logo" src="./assets/images/no-bones-transparent-logo.png" alt="No Bones About It Logo">
     <!-- <h1>No Bones About It</h1> -->
+
+    <dialog class="modal-container">
+        <div class="modal">
+            <div class="top-row">
+                <div class="modal-close mobile-close top-row-item"><i class="fa mc fa-circle-xmark"></i></div>
+                <div class="modal-logo top-row-item"><a href="/"><img
+                            src="./assets/images/nobones_transparentLogo_shrank.png" alt="No Bones About It logo"></a>
+                </div>
+
+                <div class="top-row-item">
+                    <p>Join Our Newsletter</p>
+                    <p>No Spam Ever, only the delicious vegan offerings you love</p>
+                </div>
+
+                <div class="modal-close normal-close top-row-item"><i class="fa mc fa-circle-xmark"></i></div>
+            </div>
+
+
+            <form class="form">
+                <div class="form-input-container">
+                    <label for="fname">First Name - <span>Required</span></label>
+                    <input type="text" id="fname" name="firstname" placeholder="First Name">
+                </div>
+
+
+                <div class="form-input-container">
+                    <label for="lname">Last Name - <span>Required</span></label>
+                    <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                </div>
+
+                <div class="form-input-container">
+                    <label for="lname">Email - <span>Required</span></label>
+                    <input type="text" id="lname" name="lastname" placeholder="Email">
+                </div>
+                <!-- </div> -->
+
+                <button disabled="true" class="form-button">Submit</button>
+            </form>
+
+
+            <div class="modal-foot">
+                <div class="social-icon"><i class="fa-brands fa-facebook"></i></div>
+                <div class="social-icon"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="./logic.js"></script>
 </body>
+
 </html>
