@@ -4,30 +4,26 @@
 }
 
 .modal-container {
-
-    background: rgba(0, 0, 0, 0.5);;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
     top: 0;
-
-    /* height: 100vh;
-    width: 100vw; */    
-    /* left: 0;
-    right: 0;
-    position: absolute; */
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 
 
 body {
-    /* width: 100vw;
-    height: 100vh;
-    max-width: 100vw;
-    max-height: 100vh; */
-    /* overflow: hidden; */
     text-align: center;
     background-image: url("./assets/images/landing_background5.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;    
+    background-position: center;
     overflow-x: hidden;
     font-family: "Abel", Fallback, sans-serif;
     background-attachment: fixed;
@@ -43,14 +39,14 @@ body {
 .button {
     margin: 1em;
     font-size: 2em;
-    z-index: 3;
+    /* z-index: 3; */
 }
 
 .button a {
     color: #fff;
     text-decoration: none;
     font-size: clamp(1em, 3vw, 2em);
-    z-index: 3;
+    /* z-index: 3; */
     text-transform: uppercase;
 }
 
@@ -61,16 +57,15 @@ body {
 
 #logo {
     width: clamp(18em, 35vw, 25em);
-    position: fixed;
-    top: 50%;
+    /* position: fixed; */
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
+    transform: translate(-50%, -50%); */
+    /* z-index: 3; */
 }
 
-#overlay {
+/* #overlay {
     position: fixed;
-    /* Sit on top of the page content */
     width: 100%;
     height: 100%;
     top: 0;
@@ -79,7 +74,7 @@ body {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 2;
-}
+}  */
 
 .modal {
     display: flex;
@@ -91,7 +86,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 10vw;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .3);
 }
 
 p:first-child {
@@ -102,7 +97,7 @@ p:first-child {
     color: #fff;
     display: flex;
     flex-direction: row;
-    justify-content:space-between;     
+    justify-content: space-between;
     align-items: center;
     margin: 1em;
     font-family: "Abel", Fallback, sans-serif;
@@ -142,7 +137,7 @@ p:first-child {
     cursor: pointer;
     transform: scale(1.2);
     transition: all .2s ease;
-    
+
 }
 
 .form {
@@ -164,9 +159,9 @@ label span {
     color: grey;
 }
 
-.form-input-container {    
+.form-input-container {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     align-content: center;
@@ -184,7 +179,7 @@ label span {
     width: 50%;
 }
 
-.form-button {    
+.form-button {
     border-color: #fff;
     border-width: .25rem;
     border-style: solid;
@@ -197,16 +192,16 @@ label span {
     font-family: "Abel", Fallback, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 3px;    
+    letter-spacing: 3px;
 }
 
 .form-button:hover {
     color: #825F2A;
-    border-color: #825F2A;    
+    border-color: #825F2A;
     transform: scale(1.1);
     cursor: pointer;
     transition: all .2s ease;
-}    
+}
 
 .modal-foot {
     display: flex;
@@ -259,7 +254,7 @@ label span {
 
     .form {
         font-size: .75em;
-    }    
+    }
 
     p:last-child {
         font-size: .4em;
@@ -272,5 +267,5 @@ label span {
     .social-icon {
         font-size: 1.5em;
     }
-    
+
 }

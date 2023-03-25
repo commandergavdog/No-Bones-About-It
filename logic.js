@@ -3,9 +3,8 @@
 function openModal() {
     window.onload = function() {
         setTimeout(function(){
-            let modalContainer = document.querySelector(".modal-container");
-            // console.log(modalContainer)
-            modalContainer.setAttribute("open", "true");
+            let modalContainer = document.querySelector(".modal-container");        
+            modalContainer.style.visibility= "visible";
         }, 1000)
     }
 }
