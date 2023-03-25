@@ -1,24 +1,33 @@
-/* * {
-    margin: 0;
-    padding: 0;
-} */
-
 @font-face {
     font-family: 'Abel', Fallback, sans-serif;
     src: url("./assets/fonts/Abel/Abel-Regular.ttf");
 }
+
+.modal-container {
+
+    background: rgba(0, 0, 0, 0.5);;
+    top: 0;
+
+    /* height: 100vh;
+    width: 100vw; */    
+    /* left: 0;
+    right: 0;
+    position: absolute; */
+}
+
+
 
 body {
     /* width: 100vw;
     height: 100vh;
     max-width: 100vw;
     max-height: 100vh; */
+    /* overflow: hidden; */
     text-align: center;
     background-image: url("./assets/images/landing_background5.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    /* overflow: hidden; */
+    background-position: center;    
     overflow-x: hidden;
     font-family: "Abel", Fallback, sans-serif;
     background-attachment: fixed;
@@ -29,8 +38,6 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .button {
@@ -74,15 +81,6 @@ body {
     z-index: 2;
 }
 
-.modal-container {
-    /* height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    right: 0;
-    position: absolute; */
-}
-
 .modal {
     display: flex;
     flex-direction: column;
@@ -94,6 +92,10 @@ body {
     background-size: cover;
     margin: 10vw;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+}
+
+p:first-child {
+    font-weight: 700;
 }
 
 .top-row {
@@ -110,8 +112,14 @@ body {
     line-height: 1rem;
 }
 
+.top-row-item p {
+    font-size: clamp(.5em, 2vw, 2em);
+    line-height: 1.5em;
+    margin: 0 1em;
+}
+
 .modal-logo img {
-    width: 5em;
+    width: clamp(4em, 8vw, 8em);
 }
 
 .modal-logo img:hover {
@@ -219,4 +227,50 @@ label span {
     color: #825F2A;
     cursor: pointer;
 
+}
+
+.mobile-close {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 745px) {
+
+    .mobile-close {
+        display: inline-block;
+        font-size: .75em;
+        align-self: flex-end;
+    }
+
+    .top-row {
+        flex-direction: column;
+    }
+
+    .top-row-item p {
+        margin: 0;
+        font-size: .5em;
+    }
+
+    .normal-close {
+        display: none;
+    }
+
+    .form {
+        font-size: .75em;
+    }    
+
+    p:last-child {
+        font-size: .4em;
+    }
+
+    .form-button {
+        border-width: .2em;
+    }
+
+    .social-icon {
+        font-size: 1.5em;
+    }
+    
 }
