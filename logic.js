@@ -32,5 +32,5 @@ function closeModal() {
 }
 
 closeModal();
-openModal();
+// openModal();
 
