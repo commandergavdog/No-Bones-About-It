@@ -1,3 +1,7 @@
+html {
+    overflow-x: hidden;
+}
+
 footer {
     color: #fff;
     background-color: #000;
@@ -36,7 +40,7 @@ footer {
 body {
     text-align: center;
     overflow-x: hidden;
-    font-family: "Abel", Fallback, sans-serif;    
+    font-family: "Abel", Fallback, sans-serif;
     background-color: #000;
     margin: 0;
     padding: 0;
@@ -81,11 +85,11 @@ body {
 }
 
 .logo {
-    width: clamp(18em, 35vw, 25em);    
+    width: clamp(18em, 35vw, 25em);
     z-index: 3;
     align-self: center;
     justify-self: center;
-    margin-top: 1em;
+    margin: 2em;
 }
 
 .overlay {
@@ -98,7 +102,7 @@ body {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 2;
-} 
+}
 
 .modal {
     display: flex;
@@ -253,6 +257,161 @@ label span {
 }
 
 
+section {
+    color: #fff;
+    font-family: "Abel", Fallback, sans-serif;
+    padding: 2em 1em;
+    min-height: 45vh;
+}
+
+section h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+section p {
+    line-height: 1.75em;
+}
+
+.explore-section {
+    color: #000;
+    background-color: #f4f2e2;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.explore-section div {
+    margin: 1em;
+}
+
+.explore-section button {
+    border-color: #000;
+    border-width: .25rem;
+    border-style: solid;
+    align-self: center;
+    color: #000;
+    background-color: #f4f2e2;
+    padding: .5em 1em;
+    margin: 1em;
+    font-size: 1.25em;
+    font-family: "Abel", Fallback, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.explore-section button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.explore-section img {
+    width: clamp(15em, 25vw, 25em);
+}
+
+.find-us-section button {
+    border-color: #fff;
+    border-width: .25rem;
+    border-style: solid;
+    align-self: center;
+    color: #fff;
+    background-color: transparent;
+    padding: .5em 1em;
+    margin: 1em;
+    font-size: clamp(1em, 4vw, 1.25em);
+    font-family: "Abel", Fallback, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.find-us-section button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+footer button {
+    border-color: #fff;
+    border-width: .25rem;
+    border-style: solid;
+    align-self: center;
+    color: #fff;
+    background-color: #000;
+    padding: .5em 1em;
+    margin: 1em;
+    font-size: clamp(.5em, 2vw, 1.25em);
+    font-family: "Abel", Fallback, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 1em 2em 1em auto;
+}
+
+footer button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all .2s ease;
+    color: #825F2A;
+    border-color: #825F2A;
+}
+
+
+.follow-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+}
+
+.follow-section a {
+    text-transform: uppercase;
+    font-size: clamp(1em, 8vw, 2em);
+    font-weight: 500;
+    color: #825F2A;
+}
+
+.follow-section h3 {
+    margin-top: 0;
+}
+
+.follow-section h3:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .2s ease;
+}
+
+.instagram-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+
+.instagram-section img {
+    width: clamp(5em, 30vw, 10em);
+}
+
+.instagram-section img:hover {
+    transform: scale(1.2);
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.grid-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto auto;
+    gap: 1em;
+}
 
 
 @media screen and (max-width: 745px) {
@@ -292,148 +451,13 @@ label span {
         font-size: 1.5em;
     }
 
-}
+    .explore-section {
+        flex-direction: column-reverse !important;
+    }
 
-section {
-    color: #fff;
-    font-family: "Abel", Fallback, sans-serif;    
-    padding: 2em 10em;    
-    min-height: 45vh;
-}
+    .grid-container {
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+    }
 
-section h2 {
-    text-transform: uppercase;
-    font-size: 2em;
-    font-weight: 500;
-}
-
-section p {
-    line-height: 1.75em;
-}
-
-.explore-section {
-    color: #000;
-    background-color: #f4f2e2;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.explore-section div {
-    margin: 1em;    
-}
-
-.explore-section button {
-    border-color: #000;
-    border-width: .25rem;
-    border-style: solid;
-    align-self: center;
-    color: #000;
-    background-color: #f4f2e2;
-    padding: .5em 1em;
-    margin: 1em;
-    font-size: 1.25em;
-    font-family: "Abel", Fallback, sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-.explore-section button:hover {    
-    transform: scale(1.1);
-    cursor: pointer;
-    transition: all .2s ease;
-}
-
-.find-us-section button {
-    border-color: #fff;
-    border-width: .25rem;
-    border-style: solid;
-    align-self: center;
-    color: #fff;
-    background-color: transparent;
-    padding: .5em 1em;
-    margin: 1em;
-    font-size: 1.25em;
-    font-family: "Abel", Fallback, sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-.find-us-section button:hover {    
-    transform: scale(1.1);
-    cursor: pointer;
-    transition: all .2s ease;
-}
-
-footer button {
-    border-color: #fff;
-    border-width: .25rem;
-    border-style: solid;
-    align-self: center;
-    color: #fff;
-    background-color: #000;
-    padding: .5em 1em;
-    margin: 1em;
-    font-size: clamp(.5em, 2vw, 1.25em);
-    font-family: "Abel", Fallback, sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 1em 2em 1em auto;
-}
-
-footer button:hover {    
-    transform: scale(1.1);
-    cursor: pointer;
-    transition: all .2s ease;
-    color: #825F2A;
-    border-color: #825F2A;
-}
-
-
-.follow-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.follow-section a {
-    text-transform: uppercase;
-    font-size: 2em;
-    font-weight: 500;
-    color: #825F2A;
-}
-
-.follow-section h3:hover {    
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: all .2s ease;
-}
-
-.instagram-section img {
-    width: clamp(5em, 20vw, 10em);
-}
-
-.instagram-section img:hover {
-    transform: scale(1.2);
-    transition: all .2s ease;
-    cursor: pointer;
-}
-
-.grid-container {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto auto auto;
-    gap: 1em;
-}
-
-html {
-    overflow-x: hidden;
 }
