@@ -11,6 +11,7 @@ footer {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 1em;
 }
 
 .foot-icon {
@@ -60,23 +61,53 @@ body {
 
 .nav-container {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+}
+
+.empty-div {
+    margin: auto;
+}
+
+.navigation {
+    display: flex;
+
+}
+
+.order-button {
+    border-color: #fff;
+    border-width: 0.25rem;
+    border-style: solid;
+    align-self: center;
+    color: #fff;
+    background-color: transparent;
+    padding: 0.5em 1em;
+    margin: 1em;
+    font-size: clamp(.5em, 2vw, 1.25em);
+    font-family: "Abel", Fallback, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    /* margin: 1em 2em 1em auto; */
+    text-decoration: none;
+}
+
+
+
+.order-button a {
+    text-decoration: none;
 }
 
 .button {
-    margin: 1em;
-    font-size: 2em;
-    z-index: 3;
+    margin: 1em;        
 }
 
 .button a {
+    font-size: clamp(.5em, 2vw, 2em);
     color: #fff;
-    text-decoration: none;
-    font-size: clamp(1em, 3vw, 2em);
-    z-index: 3;
+    text-decoration: none;        
     text-transform: uppercase;
+    margin: 1em;    
 }
 
 .button a:hover {
@@ -86,7 +117,7 @@ body {
 
 .logo {
     width: clamp(18em, 35vw, 25em);
-    z-index: 3;
+    /* z-index: 3; */
     align-self: center;
     justify-self: center;
     margin: 2em;
@@ -101,7 +132,7 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .modal {
@@ -291,8 +322,7 @@ section p {
 .explore-section button {
     border-color: #000;
     border-width: .25rem;
-    border-style: solid;
-    align-self: center;
+    border-style: solid;    
     color: #000;
     background-color: #f4f2e2;
     padding: .5em 1em;
@@ -301,17 +331,18 @@ section p {
     font-family: "Abel", Fallback, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 3px;    
 }
 
 .explore-section button:hover {
     transform: scale(1.1);
     cursor: pointer;
-    transition: all .2s ease;
+    transition: all .2s ease, border-width 0s;
+    border-width: 0.25rem 0;
 }
 
 .explore-section img {
-    width: clamp(15em, 25vw, 25em);
+    width: clamp(15em, 35vw, 25em);
 }
 
 .find-us-section button {
@@ -333,7 +364,8 @@ section p {
 .find-us-section button:hover {
     transform: scale(1.1);
     cursor: pointer;
-    transition: all .2s ease;
+    transition: all .2s ease, border-width 0s;
+    border-width: 0.25rem 0;
 }
 
 footer button {
@@ -396,6 +428,8 @@ footer button:hover {
 
 .instagram-section img {
     width: clamp(5em, 30vw, 10em);
+    height: clamp(5em, 30vw, 10em);
+    object-fit: cover;
 }
 
 .instagram-section img:hover {
@@ -410,7 +444,7 @@ footer button:hover {
     justify-content: center;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto auto auto;
-    gap: 1em;
+    gap: 2em;
 }
 
 
@@ -461,3 +495,10 @@ footer button:hover {
     }
 
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
