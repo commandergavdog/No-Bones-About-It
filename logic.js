@@ -2,11 +2,21 @@ function openModal() {
     window.onload = function () {
         setTimeout(function () {
             let modalContainer = document.querySelector(".modal-container");
+            // console.log(modalContainer);
             modalContainer.style.visibility = "visible";
 
             document.body.style.overflowY = "hidden";
             document.body.style.height = "100vh";
         }, 5000)
+    }
+
+    document.querySelector(".newsletter-button").onclick = function () {
+        let modalContainer = document.querySelector(".modal-container");
+        modalContainer.style.visibility = "visible";
+    
+        // console.log(modalContainer);
+        document.body.style.overflowY = "hidden";
+        document.body.style.height = "100vh";
     }
 }
 
@@ -16,7 +26,10 @@ function closeModal() {
         "click",
         function (event) {
             // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-            if (
+            if (event.target.matches(".newsletter-button")){
+                openModal()
+            }
+            else if (
                 event.target.matches(".mc") ||
                 !event.target.closest(".modal")
             ) {
@@ -27,7 +40,7 @@ function closeModal() {
     )
 
     function closeModal() {
-        document.querySelector(".modal-container").style.display = "none"
+        document.querySelector(".modal-container").style.visibility = "hidden"
         document.body.style.overflowY = "";
         document.body.style.height = "";
     }
@@ -35,35 +48,59 @@ function closeModal() {
 }
 
 function handleFooter() {
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function () { myFunction() };
+    window.onscroll = function () { stickyFooter() };    
+    const footer = document.getElementById("footer");
+    let sticky = footer.offsetHeight;
 
-    // Get the navbar
-    var footer = document.getElementById("footer");
-
-    // Get the offset position of the navbar
-    var sticky = footer.offsetHeight;
-
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
+    function stickyFooter() {
         if (window.pageYOffset >= sticky) {
             footer.classList.add("sticky")
         } else {
             footer.classList.remove("sticky");
         }
     }
+
+    // Apply margin to bottommost section to account for footer
+    window.onload  = function () {
+
+        let footer = document.querySelector("#footer");
+        let footerHeight = window.getComputedStyle(footer).height;			
+        let instaSection = document.querySelector(".instagram-section");
+    
+        instaSection.style.marginBottom = footerHeight;        
+    };
+    
+    window.onresize = function() {
+        let footer = document.querySelector("#footer");
+        let footerHeight = window.getComputedStyle(footer).height;			
+        let instaSection = document.querySelector(".instagram-section");
+
+        instaSection.style.marginBottom = footerHeight;        
+    };
+
 }
 
+function handleMobileNav() {
 
-closeModal();
-// openModal();
+    document.querySelector("#menuToggle").onclick = function () {    
+
+        let checkBox = document.querySelector(".checkbox");        
+
+        if (checkBox.checked == true) {            
+            document.documentElement.style.overflowY = "hidden";            
+            document.documentElement.style.height = "100vh";
+            
+        } else {            
+
+            document.documentElement.style.overflowY = "";
+            document.documentElement.style.height = "";
+        }
+    }
+}
+
 handleFooter();
+// openModal();
+closeModal();
+handleMobileNav();
 
-document.querySelector(".newsletter-button").onclick = function () {
-    let modalContainer = document.querySelector(".modal-container");
-    modalContainer.style.visibility = "visible";
 
-    console.log(modalContainer);
-    document.body.style.overflowY = "hidden";
-    document.body.style.height = "100vh";
-}
