@@ -12,18 +12,47 @@
 </head>
 
 <body>
-    <div id="overlay"></div>
 
     <div class="hero-container">
+
+        <div id="menuToggle">
+            <input class="checkbox" type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <li><a href="./assets/images/Landing.png">Landing</a></li>
+                <li><a href="./assets/images/Email-Modal.png">Modal </a></li>
+                <li><a href="https://frankweb.dev">Contact</a></li>
+                <li><button class="mobile-order-button">Place Order</button></li>
+                <li class="mobile-social-container">
+                    <div class="foot-icon social-icon"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="foot-icon social-icon"><i class="fa-brands fa-instagram"></i></div>
+                </li>
+            </ul>
+        </div>
+
         <div class="nav-container">
+
             <div class="button"><a href="./assets/images/Landing.png">Landing</a></div>
             <div class="button"><a href="./assets/images/Email-Modal.png">Modal</a></div>
-            <!-- <div class="button"><a href="./assets/images/Email-Modal.png">Private Events</a></div>
-            <div class="button"><a href="./assets/images/Email-Modal.png">Place Order</a></div> -->
+            <div class="button"><a href="https://frankweb.dev">Contact</a></div>
+
+            <div class="order-button">Place Order</div>
         </div>
+
+        <img class="logo" src="./assets/images/no-bones-transparent-logo.png" alt="No Bones About It Logo">
+
+        <div class="hero-scroll"><a><i class="fa-solid fa-angle-down"></i></a></div>
     </div>
 
-    <!-- <section class="about-section">
+    <footer id="footer">
+        <div class="foot-icon social-icon"><i class="fa-brands fa-facebook"></i></div>
+        <div class="foot-icon social-icon"><i class="fa-brands fa-instagram"></i></div>
+        <button class="newsletter-button">Join Our Newsletter</button>
+    </footer>
+
+    <section id="about-section" class="about-section">
         <h2>About Us</h2>
 
         <p>
@@ -32,10 +61,46 @@
             whole food ingredients. Whether you're a seasoned vegan or new to the lifestyle, we have something for you.
         </p>
 
-    </section> -->
+    </section>
 
+    <section class="explore-section">
+        <div>
+            <h2>Explore, Cook, Enjoy</h2>
+            <p>Don't miss out on these delicious flavors.</p>
+            <p>Explore our cheeses.</p>
+            <button disabled="true">Shop</button>
+        </div>
 
-    <img id="logo" src="./assets/images/no-bones-transparent-logo.png" alt="No Bones About It Logo">
+        <div><img src="./assets/images/images/cheese2.jpg" alt="vegan cheese"></div>
+    </section>
+
+    <section class="find-us-section">
+        <h2>Find Us</h2>
+        <p>Our pop-up resturants are where foodies and culinary enthusiasts come to experience the very best in vegan
+            cuisine. We host events in a variety of places, inclusing trendy city spaces to scenic outdoor venues.
+        </p>
+        <button>Explore Popups</button>
+    </section>
+
+    <section class="follow-section">
+        <h2>Follow Us</h2>
+        <h3><a>@NoBonesAboutItKC</a></h3>
+    </section>
+
+    <section class="instagram-section">
+        <div class="grid-container">
+            <img src="./assets/images/images/menu_background1.jpg" alt="NoBonesAboutItKC Instagram Picture">
+            <img src="./assets/images/images/about_background1.jpg" alt="NoBonesAboutItKC Instagram Picture">
+            <img src="./assets/images/images/about_background2.jpg" alt="NoBonesAboutItKC Instagram Picture">
+            <img src="./assets/images/images/caprese.jpg" alt="NoBonesAboutItKC Instagram Picture">
+            <img src="./assets/images/images/menu_background3.jpg" alt="NoBonesAboutItKC Instagram Picture">
+            <img src="./assets/images/images/landing_background3.jpg" alt="NoBonesAboutItKC Instagram Picture">
+            <img src="./assets/images/images/menu_background2.jpg" alt="NoBonesAboutItKC Instagram Picture">
+            <img src="./assets/images/images/cashew_cheese.jpg" alt="NoBonesAboutItKC Instagram Picture">
+        </div>
+
+    </section>
+
 
     <div class="modal-container">
         <div class="modal">
@@ -70,7 +135,7 @@
                     <label for="lname">Email - <span>Required</span></label>
                     <input type="text" id="lname" name="lastname" placeholder="Email">
                 </div>
-                <!-- </div> -->
+
 
                 <button disabled="true" class="form-button">Submit</button>
             </form>
@@ -82,7 +147,6 @@
             </div>
         </div>
     </div>
-
     <script src="./logic.js"></script>
 </body>
 
