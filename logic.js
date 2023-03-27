@@ -1,20 +1,24 @@
 function openModal() {
     window.onload = function () {
         setTimeout(function () {
-            let modalContainer = document.querySelector(".modal-container");
-            // console.log(modalContainer);
+            let modalContainer = document.querySelector(".modal-container");            
             modalContainer.style.visibility = "visible";
+
+            let mobileNav = document.querySelector("#menuToggle");
+            mobileNav.style.visibility = "hidden"
 
             document.body.style.overflowY = "hidden";
             document.body.style.height = "100vh";
-        }, 5000)
+        }, 3000)
     }
 
     document.querySelector(".newsletter-button").onclick = function () {
         let modalContainer = document.querySelector(".modal-container");
         modalContainer.style.visibility = "visible";
-    
-        // console.log(modalContainer);
+
+        let mobileNav = document.querySelector("#menuToggle");
+        mobileNav.style.visibility = "hidden"
+            
         document.body.style.overflowY = "hidden";
         document.body.style.height = "100vh";
     }
@@ -43,6 +47,9 @@ function closeModal() {
         document.querySelector(".modal-container").style.visibility = "hidden"
         document.body.style.overflowY = "";
         document.body.style.height = "";
+
+        let mobileNav = document.querySelector("#menuToggle");
+        mobileNav.style.visibility = "visible"
     }
 
 }
@@ -98,9 +105,18 @@ function handleMobileNav() {
     }
 }
 
+function scrollTo() {
+    let aboutSection = document.querySelector(".about-section");
+    let heroScroll = document.querySelector(".hero-scroll");
+
+    heroScroll.onclick = function() {aboutSection.scrollIntoView({behavior: "smooth"});}
+}
+
+handleMobileNav();
 handleFooter();
 // openModal();
 closeModal();
-handleMobileNav();
+scrollTo();
+
 
 
