@@ -75,17 +75,17 @@ function handleFooter() {
     }
 
     // Apply margin to bottommost section to account for footer
-    // window.onload  = function () {        
-    //     console.log("loaded");
+    window.onload  = function () {        
+        console.log("loaded");
 
-    //     const footer = document.getElementById("footer");
-    //     let sticky = footer.offsetHeight;
-    //     let instaSection = document.querySelector(".instagram-section");        
+        const footer = document.getElementById("footer");
+        let sticky = footer.offsetHeight;
+        let instaSection = document.querySelector(".instagram-section");        
     
-    //     instaSection.style.marginBottom = sticky + "px";   
+        instaSection.style.marginBottom = sticky + "px";   
 
-    //     console.log(instaSection.style.marginBottom);
-    // };
+        console.log(instaSection.style.marginBottom);
+    };
     
     window.onresize = function() {        
         let instaSection = document.querySelector(".instagram-section");
