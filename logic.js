@@ -127,7 +127,7 @@ function scrollTo() {
 
 handleMobileNav();
 handleFooter();
-openModal();
+// openModal();
 closeModal();
 scrollTo();
 
