@@ -649,6 +649,11 @@ a {
 /* Previously 745  */
 @media screen and (max-width: 768px) {
 
+    .instagram-section img {
+        width: clamp(5em, 30vw, 15em);
+        height: clamp(5em, 30vw, 15em);     
+    }
+
     section p {        
         margin: 1em 1em;
     }
@@ -685,7 +690,7 @@ a {
     }
 
     .social-icon {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .explore-section {
