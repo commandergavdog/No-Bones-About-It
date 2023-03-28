@@ -1,5 +1,13 @@
 function openModal() {
     window.onload = function () {
+
+        // onload bandaid for bottommost margin accounting for footer
+        const footer = document.getElementById("footer");
+        let sticky = footer.offsetHeight;
+        let instaSection = document.querySelector(".instagram-section");            
+        instaSection.style.marginBottom = sticky + "px";   
+        
+
         setTimeout(function () {
             let modalContainer = document.querySelector(".modal-container");            
             modalContainer.style.visibility = "visible";
@@ -55,9 +63,8 @@ function closeModal() {
 }
 
 function handleFooter() {
-    window.onscroll = function () { stickyFooter() };    
     const footer = document.getElementById("footer");
-    let sticky = footer.offsetHeight;
+    let sticky = footer.offsetHeight;        
 
     function stickyFooter() {
         if (window.pageYOffset >= sticky) {
@@ -68,22 +75,28 @@ function handleFooter() {
     }
 
     // Apply margin to bottommost section to account for footer
-    window.onload  = function () {
+    // window.onload  = function () {        
+    //     console.log("loaded");
 
-        let footer = document.querySelector("#footer");
-        let footerHeight = window.getComputedStyle(footer).height;			
-        let instaSection = document.querySelector(".instagram-section");
+    //     const footer = document.getElementById("footer");
+    //     let sticky = footer.offsetHeight;
+    //     let instaSection = document.querySelector(".instagram-section");        
     
-        instaSection.style.marginBottom = footerHeight;        
-    };
-    
-    window.onresize = function() {
-        let footer = document.querySelector("#footer");
-        let footerHeight = window.getComputedStyle(footer).height;			
-        let instaSection = document.querySelector(".instagram-section");
+    //     instaSection.style.marginBottom = sticky + "px";   
 
-        instaSection.style.marginBottom = footerHeight;        
+    //     console.log(instaSection.style.marginBottom);
+    // };
+    
+    window.onresize = function() {        
+        let instaSection = document.querySelector(".instagram-section");
+        
+        instaSection.style.marginBottom = sticky + "px";          
+
+        console.log(instaSection.style.marginBottom);
     };
+
+    window.onscroll = function () { stickyFooter() };    
+    
 
 }
 
@@ -114,7 +127,7 @@ function scrollTo() {
 
 handleMobileNav();
 handleFooter();
-// openModal();
+openModal();
 closeModal();
 scrollTo();
 

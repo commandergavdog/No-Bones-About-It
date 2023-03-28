@@ -649,6 +649,10 @@ a {
 /* Previously 745  */
 @media screen and (max-width: 768px) {
 
+    footer {
+        padding:1em 0;
+    }
+
     .instagram-section img {
         width: clamp(5em, 30vw, 15em);
         height: clamp(5em, 30vw, 15em);     
